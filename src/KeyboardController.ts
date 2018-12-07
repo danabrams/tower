@@ -18,6 +18,7 @@ export default class KeyboardController {
   constructor(app: App) {
     this.app = app;
     this.history = new History();
+    this.cursor = new Cursor(this.app);
   }
 
   public registerKeyEvents() {
