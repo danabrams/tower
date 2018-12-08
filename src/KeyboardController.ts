@@ -8,8 +8,6 @@ import { copyTowerObject } from "./CopyTowerObject";
 import { Brick } from "./Brick";
 import Cursor from "./Cursor";
 
-const log = console.log;
-
 export default class KeyboardController {
   public history: History;
   private app: App;

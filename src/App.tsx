@@ -230,7 +230,7 @@ class App extends React.Component<{}, IState> {
       this.currentTower().rootBrick = invocation;
       // Check if brick has inputs, and if it does, set cursor to first input.
       // If it doesn't have children, set curser on itself 
-      if (invocation.args !== null && invocation.args.length > 0) { newCursorPosition = invocation.args[0].uniqueId; }
+      if (invocation instanceof Invocation && invocation.args.length > 0) { newCursorPosition = invocation.args[0].uniqueId; }
       else { newCursorPosition = invocation.uniqueId; }
       this.setState({
         canCursorId: newCursorPosition,
@@ -245,7 +245,7 @@ class App extends React.Component<{}, IState> {
     );
     // Check if brick has inputs, and if it does, set cursor to first input.
     // If it doesn't have children, set curser on itself 
-    if (invocation.args !== null && invocation.args.length > 0) { newCursorPosition = invocation.args[0].uniqueId; }
+    if (invocation instanceof Invocation && invocation.args.length > 0) { newCursorPosition = invocation.args[0].uniqueId; }
     else { newCursorPosition = invocation.uniqueId; }
     this.setState({
       canCursorId: newCursorPosition,
